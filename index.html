@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshFarm Poultry - Inventory Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://imgs.search.brave.com/qoN8kthH1eb0wzWchJxtanAuuXTbiWFsPnelzoXuZAU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA1LzkxLzgzLzkw/LzM2MF9GXzU5MTgz/OTA5Ml91bjdSSGdB/UzBuV3VTaHN3Mlox/aXpOYWowUFF1QUli/OS5qcGc" alt="FreshFarm Poultry Logo" class="logo">
+            <h1>FreshFarm Poultry</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-clipboard-list"></i> Orders</a></li>
+                <li><a href="#"><i class="fas fa-box-open"></i> Inventory</a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i> Reports</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="hero-banner">
+        <div class="hero-text">
+            <h2>Premium Quality Poultry</h2>
+            <p>Farm fresh chicken delivered daily</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="order-form">
+            <h2><i class="fas fa-shopping-cart"></i> Place New Order</h2>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="legs"><i class="fas fa-drumstick-bite"></i> Number of Legs:</label>
+                    <input type="number" id="legs" min="0" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="wings"><i class="fas fa-kiwi-bird"></i> Number of Wings:</label>
+                    <input type="number" id="wings" min="0" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="flesh"><i class="fas fa-utensils"></i> Flesh Portions:</label>
+                    <input type="number" id="flesh" min="0" value="0">
+                </div>
+                <button type="submit"><i class="fas fa-calculator"></i> Calculate Order</button>
+            </form>
+        </div>
+        
+        <div class="results" id="results">
+            <!-- Results will be displayed here -->
+        </div>
+        
+        <div class="inventory-summary">
+            <h2><i class="fas fa-clipboard-check"></i> Current Inventory</h2>
+            <div id="inventoryDisplay">
+                <!-- Inventory will be displayed here -->
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-showcase">
+        <h2>Our Premium Products</h2>
+        <div class="products">
+            <div class="product-item">
+                <img src="https://imgs.search.brave.com/0X9nctjl9dLFqSICIx4v3F_BMlKGWCCmUspnuwpjJkQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTI4/Mjg2NjgwOC9waG90/by9mcmVzaC1yYXct/Y2hpY2tlbi5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9UXRm/ZEFoZGVJR3BSM0pV/TkRtWUZvNmNOMGVs/OG9ZTWNPWE1RSTdR/ZGVyND0" alt="Chicken Legs">
+                <h3>Fresh Chicken Legs</h3>
+                <p>250g each, premium quality</p>
+            </div>
+            <div class="product-item">
+                <img src="https://imgs.search.brave.com/0X9nctjl9dLFqSICIx4v3F_BMlKGWCCmUspnuwpjJkQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTI4/Mjg2NjgwOC9waG90/by9mcmVzaC1yYXct/Y2hpY2tlbi5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9UXRm/ZEFoZGVJR3BSM0pV/TkRtWUZvNmNOMGVs/OG9ZTWNPWE1RSTdR/ZGVyND0" alt="Chicken Wings">
+                <h3>Juicy Chicken Wings</h3>
+                <p>250g each, perfect for grilling</p>
+            </div>
+            <div class="product-item">
+                <img src="https://imgs.search.brave.com/0X9nctjl9dLFqSICIx4v3F_BMlKGWCCmUspnuwpjJkQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTI4/Mjg2NjgwOC9waG90/by9mcmVzaC1yYXct/Y2hpY2tlbi5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9UXRm/ZEFoZGVJR3BSM0pV/TkRtWUZvNmNOMGVs/OG9ZTWNPWE1RSTdR/ZGVyND0" alt="Chicken Flesh">
+                <h3>Fresh Chicken Flesh</h3>
+                <p>1kg portions, tender and flavorful</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <img src="https://imgs.search.brave.com/qoN8kthH1eb0wzWchJxtanAuuXTbiWFsPnelzoXuZAU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA1LzkxLzgzLzkw/LzM2MF9GXzU5MTgz/OTA5Ml91bjdSSGdB/UzBuV3VTaHN3Mlox/aXpOYWowUFF1QUli/OS5qcGc" alt="FreshFarm Poultry Logo" class="footer-logo">
+            <p>&copy; 2023 FreshFarm Poultry. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
